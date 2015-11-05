@@ -1,0 +1,97 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" id="ng-app" ng-app="app"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" id="ng-app" ng-app="app"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" id="ng-app" ng-app="app"> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html class="no-js" id="ng-app" ng-app="app"> <!--<![endif]-->
+  <head>
+    <title>Angucomplete Alt: Autocomplete Directive for AngularJS</title>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+    <link rel="stylesheet" href="../css/autocomplete/structure.css"/>
+    <link rel="stylesheet" href="../css/autocomplete/angucomplete-alt.css"/>
+    <link rel="stylesheet" href="../fonts/bariol/bariol.css"/>
+    <script src="../lib/angular-1.2.19/angular.min.js"></script>
+    <script src="../lib/angular-1.2.19/angular-touch.min.js"></script>
+<!--     <script src="../lib/angularjs/angular.js"></script> -->
+    <script src="../lib/angucomplete-alt.js"></script>
+    <script src="../js/app.js"></script>
+    </head>
+  <body ng-controller="MainController">
+    <!--[if lt IE 9]>
+      <script src="js/libs/es5-shim.min.js"></script>
+      <script src="js/libs/json3.min.js"></script>
+    <![endif]-->
+
+    <a href="https://github.com/ghiden/angucomplete-alt"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
+
+    <div>
+
+      <h1>Search Food By DianPing </h1>
+<!--       <h2>Awesome Autocompleteness for AngularJS</h2>
+      <p>
+      A minimal looking autocomplete directive originally developed by Daryl Rowland as <a href="https://github.com/darylrowland/angucomplete">Angucomplete</a>, and I added a few tweaks to it and renamed it to <a href="https://github.com/ghiden/angucomplete-alt">angucomplete-alt</a>.
+      </p> -->
+
+<!--       <div>
+        <ul>
+          <li><a href="#example1">Example 1 - Countries of the World</a></li>
+          <li><a href="#example2">Example 2 - People</a></li>
+          <li><a href="#example3">Example 3 - Clear Result on Selection</a></li>
+          <li><a href="#example4">Example 4 - Override Suggestions with Clear Result</a></li>
+          <li><a href="#example5">Example 5 - Using GitHub Search API</a></li>
+          <li><a href="#example6">Example 6 - Show Matches in Both Name and Description</a></li>
+          <li><a href="#example7">Example 7 - Callback</a></li>
+          <li><a href="#example8">Example 8 - Required</a></li>
+          <li><a href="#example9">Example 9 - Initial Value</a></li>
+          <li><a href="#example10">Example 10 - Track Input Changes</a></li>
+          <li><a href="#example11">Example 11 - Auto Match</a></li>
+          <li><a href="#example12">Example 12 - Track Input Focus</a></li>
+          <li><a href="#example13">Example 13 - Disable/Enable Input</a></li>
+          <li><a href="#example14">Example 14 - Custom Template</a></li>
+          <li><a href="#example15">Example 15 - Clear Input on Button Click</a></li>
+          <li><a href="#example16">Example 16 - Change Input on Button Click</a></li>
+        </ul>
+      </div> -->
+
+
+
+      <div class="large-padded-row">
+
+<!--         <h3><a name="example7" class="page-anchor">Example 7 - Callback</a></h3>
+        <div class="padded-row">
+<pre>
+&lt;div angucomplete-alt
+  id="ex7"
+  placeholder="Search countries"
+  pause="100"
+  selected-object="countrySelected"
+  local-data="countries"
+  search-fields="name"
+  title-field="name"
+  minlength="1"
+  input-class="form-control form-control-small"
+  match-class="highlight"&gt;
+&lt;/div&gt;
+</pre>
+        </div> -->
+        <div class="padded-row">
+          <div angucomplete-alt id="ex7" placeholder="Search countries" pause="100" selected-object="countrySelected" local-data="countries" search-fields="name" title-field="name" minlength="1" input-class="form-control form-control-small" match-class="highlight">
+          </div>
+        </div>
+
+      </div>
+
+
+<!--       <div class="very-large-padded-row">
+        <h5>Originally developed by Daryl Rowland (<a href="http://twitter.com/darylrowland">@darylrowland</a>)</h5>
+        <h5>Forked and developed by Hidenari Nozaki (<a href="http://twitter.com/ghiden">@ghiden</a>)</h5>
+      </div> -->
+
+<!--       <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular-touch.min.js"></script> -->
+<!--       <script src="js/libs/angucomplete-alt.js"></script>
+      <script src="js/app.js"></script> -->
+    </div>
+  </body>
+</html>
