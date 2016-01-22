@@ -59,3 +59,102 @@
                         document.write("<br/>");
                         document.write("排序之后：" + resultArr);
 //                        alert("排序之前：" + initArr + "/n 排序之后：" + resultArr);
+                        
+                        
+                        var indexData = {
+                        		  "custid": "1",
+                        		  "addresses": [
+                        		    {
+                        		      "addressType": "P",
+                        		      "address1": ""
+                        		    },
+                        		    {
+                        		      "addressType": "M"
+                        		    }
+                        		  ],
+                        		  "personalDetails": {
+                        		    "title": "",
+                        		    "name": ""       
+                        		  }
+                        		}
+                        
+                        var db;
+                        var request = window.indexedDB.open("newDatabase", 1);
+                        request.onupgradeneeded = function(event) {
+                         var db = event.target.result;
+                                var objectStore = db.createObjectStore("customers",{keyPath: "isbn"});
+                                for (var i in indexData) {
+                                        objectStore.add({i:indexData[i],isbn: i});      
+                                }
+
+                        }
+                        
+                        
+/*                        window.onbeforeunload = closingCode;
+                        function closingCode(){
+                        	
+                        	if(window.event.clientX > 0 && window.event.clientY < 0){
+                        	
+                        	// do something...
+                        	localStorage.clear();
+                	    	sessionStorage.clear();
+                           return null;
+                           }
+                        }*/
+                        
+                        
+                        window.onbeforeunload = function (e)
+                        {
+
+                            e = e || window.event;
+                            var y = e.pageY || e.clientY;
+                            if (y < 0){
+                            return "Do You really Want to Close the window ?"
+                            }
+                            else {
+                            return "Refreshing this page can result in data loss."; 
+                            }
+
+                          }
+                        
+                        
+ /*                       window.addEventListener("beforeunload", function (e) {
+                            var confirmationMessage = "\o/";
+                            alert("exit");
+                        	localStorage.clear();
+                	    	sessionStorage.clear();
+                            (e || window.event).returnValue = null; //Gecko + IE
+                            return null;                            //Webkit, Safari, Chrome
+                        });*/
+                        
+                        
+/*                        var tryingToReload = false;
+                        window.onbeforeunload = function(e) //on before unload
+                        {
+                        	alert(navigator.appName);
+                        if (!e) //Firefox and Safari gets argument directly.
+                        {
+                        e = window.event; // this is for IE
+                        }
+
+                        if (e.clientY != undefined && e.clientY < 0) // clicked on the close button for IE
+                        {
+                        tryingToReload = false;
+                        }
+
+                        if (e.clientY != undefined && (e.clientY > 100 && e.clientY < 140)) // select close from context menu from the right click on title bar on IE
+                        {
+                        tryingToReload = false;
+                        }
+
+                        if (tryingToReload) //user hasn't clicked on X close button or hasn't selected close from context menu
+                        {
+                        tryingToReload = false;
+                        return "warning message goes here";
+                        }
+                        }*/
+                        
+                        
+                        
+                        
+                        
